@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[44,)"
+license="GNU LESSER GENERAL PUBLIC LICENSE Version 2.1"
+
+[[mods]]
+modId="phantombody"
+version="${file.jarVersion}"
+displayName="Phantom Body"
+logoFile="phantombody.png"
+credits="By guy7cc"
+authors="guy7cc"
+description='''
+You are the Phantom.
+'''
+
+[[dependencies.phantombody]]
+    modId="forge"
+    mandatory=true
+    versionRange="[44,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.phantombody]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.19.3,1.20)"
+    ordering="NONE"
+    side="BOTH"
