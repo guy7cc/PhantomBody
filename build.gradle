@@ -1,9 +1,17 @@
+buildscript {
+    dependencies {
+        classpath group: 'org.spongepowered', name: 'mixingradle', version: '0.7-SNAPSHOT'
+    }
+}
+
 plugins {
+    id 'net.minecraftforge.gradle' version '5.1.+'
     id 'eclipse'
     id 'maven-publish'
-    id 'net.minecraftforge.gradle' version '5.1.+'
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
+
+apply plugin: 'org.spongepowered.mixin'
 
 version = '1.0'
 group = 'io.github.guy7cc.phantombody' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
@@ -141,6 +149,11 @@ dependencies {
     // For more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+}
+
+mixin {
+    add sourceSets.main, 'phantombody.refmap.json'
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
