@@ -4,8 +4,18 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "phantombody.refmap.json",
   "mixins": [
+    "MixinBlockCollisions"
   ],
   "client": [
+    "MixinBlock",
+    "MixinGameRenderer",
+    "MixinEffectInstance"
   ],
+  "server": [
+
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
   "minVersion": "0.8"
 }

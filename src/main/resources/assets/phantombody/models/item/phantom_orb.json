@@ -1,0 +1,10 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "phantombody:item/phantom_orb0"
+  },
+  "overrides": [
+    { "predicate": { "phantombody:phantom": 0.0 }, "model": "phantombody:item/phantom_orb" },
+    { "predicate": { "phantombody:phantom": 1.0 }, "model": "phantombody:item/phantom_orb1" }
+  ]
+}

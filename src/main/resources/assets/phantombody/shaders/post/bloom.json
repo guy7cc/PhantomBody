@@ -1,0 +1,35 @@
+{
+  "targets": [
+    "swap",
+    "swap2",
+    "temp"
+  ],
+  "passes": [
+    {
+      "name": "phantombody:bloom_step",
+      "intarget": "minecraft:main",
+      "outtarget": "swap"
+    },
+    {
+      "name": "phantombody:bloom_blur",
+      "intarget": "swap",
+      "outtarget": "swap2"
+    },
+    {
+      "name": "phantombody:bloom_add",
+      "intarget": "minecraft:main",
+      "outtarget": "temp",
+      "auxtargets": [
+        {
+          "name": "BloomSampler",
+          "id": "swap2"
+        }
+      ]
+    },
+    {
+      "name": "blit",
+      "intarget": "temp",
+      "outtarget": "minecraft:main"
+    }
+  ]
+}
